@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="grauballeStyle.CSS">
 </head>
 <body>
-    
-</body>
+    <div class="container">
+      <div class="image-wrapper">
+        <img src="your-image.png" alt="3D Cutout Image" class="image-3d" />
+  
+        <!-- Hotspots (positioned absolutely within the .image-wrapper) -->
+        <div class="hotspot" data-info="Info about this point" style="top: 30%; left: 40%;"></div>
+        <div class="hotspot" data-info="Another point's information" style="top: 50%; left: 60%;"></div>
+        <div class="hotspot" data-info="More details on this point" style="top: 70%; left: 30%;"></div>
+      </div>
+  
+      <!-- Popup Container -->
+      <div class="popup" id="popup">
+        <span id="popup-text"></span>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+  
+    <script src="grauballeScript.js"></script>
+  </body>
 </html>

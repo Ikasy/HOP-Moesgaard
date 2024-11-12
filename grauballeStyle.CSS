@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    overflow: hidden;
+  }
+  
+  .container {
+    perspective: 1000px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+  }
+  
+  .image-3d {
+    width: 300px;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+    transition: transform 0.1s;
+  }
+  
+  /* Hotspot styles */
+  .hotspot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+  
+  /* Popup styles */
+  .popup {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 10;
+  }
+  
+  .popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
