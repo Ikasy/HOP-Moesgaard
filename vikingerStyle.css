@@ -1,0 +1,83 @@
+/* Stil til index-siden */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 120px;
+}
+
+.box:not(:first-child) {
+    background-color: #ccc;
+    cursor: default;
+}
+
+/* Overlay stil */
+.overlay {
+    display: none;
+    /* Starter med at skjule alle overlays */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    height: 70%;
+    border: 3px solid #000;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #3498db;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* ********** Dronning Tove info overlay - overlay 1 ********** */
+.info-plads {
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: auto;
+}
+
+.info-plads img {
+    width: 100px;
+    height: 200px;
+    background-color: chocolate;
+    border-radius: 100%;
+    /* bliver den ikke rund ved 100% ? */
+}
+
+.info-indhold {
+    background-color: #c8db34;
+}

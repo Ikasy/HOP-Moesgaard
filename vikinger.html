@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikinger</title>
     <link rel="stylesheet" href="vikingerStyle.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+
+    <!-- Index-siden med 7 bokse -->
+    <div class="box" onclick="openOverlay('overlay1')">Vælg Dronning Tove</div>
+    <div class="box">Boks 2</div>
+    <div class="box">Boks 3</div>
+    <div class="box">Boks 4</div>
+    <div class="box">Boks 5</div>
+    <div class="box">Boks 6</div>
+    <div class="box">Boks 7</div>
+
+    <!-- Overlay 1 -->
+    <div id="overlay1" class="overlay">
+        <div class="overlay-content">
+            <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <img src="#" alt="Dronning Tove portræt">
+                <div class="info-indhold"></div>
+                <h2>Dronning Tove</h2>
+                <p>Som dronning Toves betroede hofdame står du ved hendes side, mens rygterne om Svend Tveskægs oprør
+                    mod kong Harald breder sig. Hvert råd du giver, vil forme Toves valg – og måske hele kongerigets
+                    skæbne.</p>
+                <button onclick="openOverlay('overlay2')">vælg</button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Overlay 2  - historien starter -->
+    <div id="overlay2" class="overlay">
+        <div class="overlay-content">
+            <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <div class="videocontainer">
+                    <!-- videoloop eller video på scroll hvor tekst kommer frem -->
+                    <video src="#"></video>
+                </div>
+                <!-- scroll 'knap' som onboarding? -->
+                <button onclick="scrollToElement()">Scroll</button>
+                <!-- det første valg  -->
+                <div class="forstevalg" #forstevalg>
+                    <img src="#" alt="billede her">
+                    <p>"Hofdame," siger Tove, "Svend er i færd med at samle styrker mod Harald, og ingen ved, hvad hans
+                        næste træk bliver. Jeg må handle, men ved ikke, hvilken vej jeg skal gå."</p>
+                    <p>Du kan råde hende til enten at mødes med Svend i håb om at finde ro, eller til at opsøge vølven
+                        som måske kan hjælpe hende med visdom og magiske midler. </p>
+                    <h3 class="valgspg">Hvad råder du Tove til at gøre?</h3>
+                    <button onclick="openOverlay('overlay3')">Søg fred med Svend</button>
+                    <button onclick="openOverlay('overlay4')">Søg hjælp ved vølven</button>
+                </div>
+                <img src="#" alt="flourish linje her">
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 3 – Mødet med Svend
+        (hvis du rådede Tove til at søge fred med Svend)-->
+    <div id="overlay3" class="overlay">
+        <div class="overlay-content">
+            <button onclick="closeOverlay()">Luk</button>
+            <div class="info plads">
+                <!-- først eksposition og konsekvens af tidligere valg -->
+                <div class="konsekvens">
+                    <img src="#" alt="ikon">
+                    <p>
+                        Tove beslutter sig for at følge dit råd og rejser afsted for at møde Svend i hans lejr. Du
+                        følger hende og sørger for, at hun har det, hun behøver. Da hun taler med Svend, forklarer han,
+                        at han føler sig forrådt af sin far og længes efter at blive taget alvorligt.
+                    </p>
+                    <p>
+                        "Jeg er min fars blod," siger Svend. "Hvorfor vil han ikke give mig den plads, jeg fortjener?"
+                    </p>
+                </div>
+                <img src="#" alt="omvendt flourish linje her">
+
+                <!-- valg nummer to  -->
+                <div class="andetvalg">
+                    <img src="#" alt="ikon">
+                    <p>Du kan nu vælge at rådgive Tove til at støtte Svend og forsikre ham om, at hun vil hjælpe ham med
+                        at tage magten. Eller du kan rådgive Tove til at minde Svend om, at han kan vinde respekt ved at
+                        være loyal overfor sin far og førstefødt arving. </p>
+                    <h3 class="valgspg">Hvad foreslår du, at Tove skal sige til Svend?</h3>
+                    <button onclick="openOverlay('overlay5')">Støt Svends krav til tronen</button>
+                    <button onclick="openOverlay('overlay6')">Appeller til Svends loyalitet</button>
+                </div>
+                <img src="#" alt="flourish linje her">
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 4 - empty !! (hvis du rådede Tove til at søge hjælp fra vølven) -->
+
+    <div id="overlay4" class="overlay">
+        <div class="overlay-content">
+            <h2>Overlay 4</h2>
+            <button onclick="openOverlay('overlay7')">Gå til Overlay 7</button>
+            <button onclick="openOverlay('overlay8')">Gå til Overlay 8</button>
+            <button onclick="closeOverlay()">Luk</button>
+        </div>
+    </div>
+
+
+    <!-- overlay 5  - Svends magt
+    (hvis Tove støttede Svends krav om tronen)-->
+    <div id="overlay5" class="overlay">
+        <div class="overlay-content">
+            <h2>Overlay 5</h2>
+            <button onclick="closeOverlay()">Luk</button>
+        </div>
+    </div>
+
+    <div id="overlay6" class="overlay">
+        <div class="overlay-content">
+            <h2>Overlay 6</h2>
+            <button onclick="closeOverlay()">Luk</button>
+        </div>
+    </div>
+
+    <div id="overlay7" class="overlay">
+        <div class="overlay-content">
+            <h2>Overlay 7</h2>
+            <button onclick="closeOverlay()">Luk</button>
+        </div>
+    </div>
+
+    <div id="overlay8" class="overlay">
+        <div class="overlay-content">
+            <h2>Overlay 8</h2>
+            <button onclick="closeOverlay()">Luk</button>
+        </div>
+    </div>
+
 </body>
+
+</html>
+
+</body>
+
 </html>
