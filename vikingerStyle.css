@@ -122,3 +122,22 @@ video {
     height: 10px;
     background-color: var(--Colour-sky);
 }
+
+.forstevalg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ******** custom shape til billede med hjælp fra Chatgpt 
+https://chatgpt.com/share/6735e3bf-2928-8002-8ee8-ecd1b9328cb9  *** */
+.custom-shape {
+    width: 300px;
+    height: 200px;
+    background-image: url('your-image.jpg');
+    background-color: #812c1d;
+    background-size: cover;
+    background-position: center;
+    clip-path: path("M165.315 21.7629C146.923 16.481 145.33 12.7072 142.738 0.7417C142.563 1.2697 142.396 1.7833 142.234 2.2834C139.297 11.3205 137.791 15.952 121.037 21.7629H42.4161C19.2202 21.7629 0.4161 40.5669 0.4161 63.7629V160.41H286.5V63.7629C286.5 40.567 267.696 21.7629 244.5 21.7629H165.315Z");
+}
