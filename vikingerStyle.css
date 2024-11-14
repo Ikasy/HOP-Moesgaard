@@ -1,18 +1,40 @@
-/* Stil til index-siden */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding-top: 50px;
     margin: 0;
-    background-color: #f4f4f9;
+    font-family: "museo-sans", sans-serif;
+    font-weight: 300;
+}
+
+:root {
+    --colour-white: #ebe8e2;
+    --colour-black: #221d0e;
+    --colour-red: #812c1d;
+    --colour-sand: #BB9B81;
+    --colour-petrol: #254441;
+    --Colour-sky: #a8c2d0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: calc(16px + 0.39065);
+
+}
+
+h2 {
+    font-size: calc(28px + 0.39065vw);
+}
+
+h3 {
+    font-size: calc(24px + 0.39065vw);
 }
 
 .box {
     padding: 20px;
     margin: 10px;
-    background-color: #3498db;
+    background-color: var(--colour-sand);
     color: white;
     cursor: pointer;
     text-align: center;
@@ -21,8 +43,9 @@ body {
     width: 120px;
 }
 
+/* alle andre end Tove */
 .box:not(:first-child) {
-    background-color: #ccc;
+    background-color: var(--Colour-sky);
     cursor: default;
 }
 
@@ -35,9 +58,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 500px;
+    max-width: 90%;
     height: 70%;
-    border: 3px solid #000;
+    border: 3px solid var(--colour-black);
     padding: 20px;
     align-items: center;
     justify-content: center;
@@ -45,7 +68,7 @@ body {
 
 .overlay-content {
     text-align: center;
-    color: white;
+    color: var(--colour-black);
 }
 
 button {
@@ -55,25 +78,21 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #ffffff;
-    color: #3498db;
+    background-color: var(--colour-red);
+    color: var(--colour-white);
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: var(--colour-sand);
 }
 
 /* ********** Dronning Tove info overlay - overlay 1 ********** */
 .info-plads {
-    background-color: rgb(255, 0, 0);
     width: 100%;
     height: auto;
 }
 
 .info-plads img {
-    width: 100px;
-    height: 200px;
-    background-color: chocolate;
     border-radius: 100%;
     /* bliver den ikke rund ved 100% ? */
 }

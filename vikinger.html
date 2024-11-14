@@ -7,6 +7,8 @@
     <title>Vikinger</title>
     <link rel="stylesheet" href="vikingerStyle.css">
     <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/meh3zyy.css">
 </head>
 
 <body>
@@ -41,6 +43,7 @@
     <!-- Overlay 2  - historien starter -->
     <div id="overlay2" class="overlay">
         <div class="overlay-content">
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
             <div class="info-plads">
                 <div class="videocontainer">
@@ -69,8 +72,9 @@
         (hvis du rådede Tove til at søge fred med Svend)-->
     <div id="overlay3" class="overlay">
         <div class="overlay-content">
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
-            <div class="info plads">
+            <div class="info-plads">
                 <!-- først eksposition og konsekvens af tidligere valg -->
                 <div class="konsekvens">
                     <img src="#" alt="ikon">
@@ -100,14 +104,40 @@
         </div>
     </div>
 
-    <!-- Overlay 4 - empty !! (hvis du rådede Tove til at søge hjælp fra vølven) -->
+    <!-- Overlay 4 - Hos Vøvlen
+    (hvis du rådede Tove til at søge hjælp fra vølven) -->
 
     <div id="overlay4" class="overlay">
         <div class="overlay-content">
-            <h2>Overlay 4</h2>
-            <button onclick="openOverlay('overlay7')">Gå til Overlay 7</button>
-            <button onclick="openOverlay('overlay8')">Gå til Overlay 8</button>
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
+            <div class="info plads">
+                <!-- først eksposition og konsekvens af tidligere valg -->
+                <div class="konsekvens">
+                    <img src="#" alt="ikon">
+                    <p>
+                        Du følger Tove ud til skoven, hvor vølven bor, og sammen møder I den mystiske kvinde, som
+                        tilbyder Tove en magisk eliksir. Eliksiren vil ifølge vølven give Tove en unik styrke, som kan
+                        hjælpe hende med at bevare kontrollen over hoffet. Men vølven advarer også:
+                    </p>
+                    <p>
+                        "Eliksiren vil give dig magt, men kræve sin pris – og du vil bære konsekvenserne på din egen
+                        krop."
+                    </p>
+                </div>
+                <img src="#" alt="omvendt flourish linje her">
+
+                <!-- valg nummer to  -->
+                <div class="andetvalg">
+                    <img src="#" alt="ikon">
+                    <p>Tove søger råd hos dig og du kan enten råde hende til at drikke eliksiren selv, eller til at lade
+                        Kongen drikke elikseren for at blive mere modstandsdygtig overfor Svends trusler. </p>
+                    <h3 class="valgspg">Hvad foreslår du, at Tove skal gøre?</h3>
+                    <button onclick="openOverlay('overlay5')">Give eliksiren til Harald</button>
+                    <button onclick="openOverlay('overlay6')">Tove drikker selv eliksiren</button>
+                </div>
+                <img src="#" alt="flourish linje her">
+            </div>
         </div>
     </div>
 
@@ -116,29 +146,78 @@
     (hvis Tove støttede Svends krav om tronen)-->
     <div id="overlay5" class="overlay">
         <div class="overlay-content">
-            <h2>Overlay 5</h2>
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <img src="#" alt="ikon">
+                <img src="#" alt="omvendt flourish linje her">
+                <h2>Svends magt</h2>
+                <p>Efter dit råd støtter Tove Svend og hans krav på tronen. Svend overtager kongemagten, og Tove står nu
+                    ved hans side. Men med en ny konge kommer også nye allierede, og du mærker, hvordan Toves plads ved
+                    hoffet bliver usikker. Svends nye rådgivere ser hende som en trussel, og du forsøger at beskytte
+                    hende, men frygten for hofintriger vokser.
+                </p>
+                <img src="#" alt="Flourish linje her">
+            </div>
         </div>
     </div>
 
+    <!-- Overlay 6 - Forsoningen
+    (hvis Tove appellerede til Svends loyalitet) -->
     <div id="overlay6" class="overlay">
         <div class="overlay-content">
-            <h2>Overlay 6</h2>
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <img src="#" alt="ikon">
+                <img src="#" alt="omvendt flourish linje her">
+                <h2>Forsoningen</h2>
+                <p>Takket være din kløgt og rådgivning indvilliger Tove i at appellere til Svends følelser, og samtalen
+                    bliver en succes. Svend går med til at vende tilbage til sin far og lægge oprøret til side, men han
+                    kræver anerkendelse som arving. Harald modtager ham med lettelse, og din indsats har bragt freden
+                    tilbage.
+                </p>
+                <img src="#" alt="Flourish linje her">
+            </div>
         </div>
     </div>
-
+    <!-- Overlay 7 - Haralds styrke
+    (hvis Tove lod Harald drikke eliksiren) -->
     <div id="overlay7" class="overlay">
         <div class="overlay-content">
-            <h2>Overlay 7</h2>
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <img src="#" alt="ikon">
+                <img src="#" alt="omvendt flourish linje her">
+                <h2>Haralds styrke</h2>
+                <p>Da Tove giver eliksiren til Harald, vokser hans styrke, men også hans ubønhørlighed. Med sine nye
+                    kræfter undertrykker han oprøret, men bliver kold og hård – også mod Tove. Hans karisma og magt er
+                    større end nogensinde, men prisen har været stor. Som hendes nærmeste indser du, at kongen ikke
+                    længere ser på Tove som før.
+                </p>
+                <img src="#" alt="Flourish linje her">
+            </div>
         </div>
     </div>
 
+    <!-- overlay 8 - Toves magt
+    (hvis Tove selv drak eliksiren) -->
     <div id="overlay8" class="overlay">
         <div class="overlay-content">
-            <h2>Overlay 8</h2>
+            <button onclick="goBack()">Tilbage</button>
             <button onclick="closeOverlay()">Luk</button>
+            <div class="info-plads">
+                <img src="#" alt="ikon">
+                <img src="#" alt="omvendt flourish linje her">
+                <h2>Toves magt</h2>
+                <p>Da Tove selv drikker eliksiren, bliver hun fyldt med en ny styrke og kan nu inspirere hoffet og vinde
+                    støtte blandt kongens rådgivere. Svends oprør standses, og Harald forbliver på tronen. Men eliksiren
+                    har svækket Toves helbred, og du må nu passe på hende mere end nogensinde, selvom hendes position er
+                    stærkere end før.
+                </p>
+                <img src="#" alt="Flourish linje her">
+            </div>
         </div>
     </div>
 
