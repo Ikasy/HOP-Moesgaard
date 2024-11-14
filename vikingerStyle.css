@@ -31,16 +31,29 @@ h3 {
     font-size: calc(24px + 0.39065vw);
 }
 
+.characterwindow {
+    width: 100%;
+    height: auto;
+}
+
+.boxcontainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+
+    width: 50%;
+}
+
 .box {
-    padding: 20px;
-    margin: 10px;
+    padding: 2%;
+    margin: 1% 0;
     background-color: var(--colour-sand);
-    color: white;
+    color: var(--colour-white);
     cursor: pointer;
     text-align: center;
-    border-radius: 8px;
-    font-size: 18px;
-    width: 120px;
+    width: 100%;
 }
 
 /* alle andre end Tove */
@@ -59,7 +72,7 @@ h3 {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 90%;
-    height: 70%;
+    height: 80%;
     border: 3px solid var(--colour-black);
     padding: 20px;
     align-items: center;
@@ -68,7 +81,11 @@ h3 {
 
 .overlay-content {
     text-align: center;
-    color: var(--colour-black);
+    color: var(--colour-white);
+    width: 50%;
+    height: 100%;
+    background-color: var(--colour-petrol);
+
 }
 
 button {
@@ -99,4 +116,9 @@ button:hover {
 
 .info-indhold {
     background-color: #c8db34;
+}
+
+video {
+    height: 10px;
+    background-color: var(--Colour-sky);
 }

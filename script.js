@@ -1,24 +1,3 @@
-/* Script til Vikinger */
-// Funktion til at åbne et specifikt overlay
-function openOverlay(overlayId) {
-    // Lukker alle overlays
-    closeOverlay();
-
-    // Finder og viser det ønskede overlay
-    const overlay = document.getElementById(overlayId);
-    if (overlay) {
-        overlay.style.display = 'flex';
-    }
-}
-
-// Funktion til at lukke alle overlays
-function closeOverlay() {
-    const overlays = document.querySelectorAll('.overlay');
-    overlays.forEach(overlay => {
-        overlay.style.display = 'none';
-    });
-}
-
 // Gemmer historikken af overlays
 const overlayHistory = [];
 
@@ -37,6 +16,13 @@ function openOverlay(overlayId) {
     const overlay = document.getElementById(overlayId);
     if (overlay) {
         overlay.style.display = 'flex';
+
+        // Tilføjer klik-hændelse til overlay for at lukke ved klik udenfor
+        overlay.addEventListener('click', function (e) {
+            if (e.target.classList.contains('overlay-background')) {
+                closeOverlay();
+            }
+        });
     }
 }
 
@@ -57,3 +43,4 @@ function goBack() {
         openOverlay(previousOverlayId);  // Åbner tidligere overlay
     }
 }
+

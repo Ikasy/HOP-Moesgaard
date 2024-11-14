@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="vikingerStyle.css">
     <script src="script.js" defer></script>
 
+    <!-- font - *Museo Sans* fra Adobe fonts-->
     <link rel="stylesheet" href="https://use.typekit.net/meh3zyy.css">
 </head>
+
+<!-- ****************************
+Denne side er kodet af Anne-Mette 
+********************************* -->
 
 <body>
 
     <!-- Index-siden med 7 bokse -->
-    <div class="box" onclick="openOverlay('overlay1')">Vælg Dronning Tove</div>
-    <div class="box">Boks 2</div>
-    <div class="box">Boks 3</div>
-    <div class="box">Boks 4</div>
-    <div class="box">Boks 5</div>
-    <div class="box">Boks 6</div>
-    <div class="box">Boks 7</div>
+    <div class="characterwindow">
+        <div class="boxcontainer">
+            <div class="box" onclick="openOverlay('overlay1')">Vælg Dronning Tove</div>
+            <div class="box">Boks 2</div>
+            <div class="box">Boks 3</div>
+            <div class="box">Boks 4</div>
+            <div class="box">Boks 5</div>
+            <div class="box">Boks 6</div>
+            <div class="box">Boks 7</div>
+        </div>
+    </div>
 
     <!-- Overlay 1 -->
     <div id="overlay1" class="overlay">
@@ -49,11 +58,16 @@
                 <div class="videocontainer">
                     <!-- videoloop eller video på scroll hvor tekst kommer frem -->
                     <video src="#"></video>
+                    <p>Du er dronning Toves betroede hofdame. Som den eneste, hun kan tale frit med, har Tove i årevis
+                        stolet på dig som sin fortrolige rådgiver.</p>
+
+                    <p>En aften beder hun dig møde hende i hendes private gemakker, hvor hun fortæller om rygterne om
+                        Svend Tveskægs oprør mod hans far, kong Harald Blåtand.</p>
                 </div>
-                <!-- scroll 'knap' som onboarding? -->
-                <button onclick="scrollToElement()">Scroll</button>
+                <!-- scroll 'knap' som onboarding? 
+                <button onclick="scrollToElement()">Scroll</button> -->
                 <!-- det første valg  -->
-                <div class="forstevalg" #forstevalg>
+                <div class="forstevalg">
                     <img src="#" alt="billede her">
                     <p>"Hofdame," siger Tove, "Svend er i færd med at samle styrker mod Harald, og ingen ved, hvad hans
                         næste træk bliver. Jeg må handle, men ved ikke, hvilken vej jeg skal gå."</p>
