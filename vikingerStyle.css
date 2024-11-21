@@ -5,6 +5,8 @@ body {
     font-weight: 300;
 }
 
+
+
 :root {
     --colour-white: #ebe8e2;
     --colour-black: #221d0e;
@@ -18,11 +20,6 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-size: calc(16px + 0.39065);
-
-}
-
 h2 {
     font-size: calc(28px + 0.39065vw);
 }
@@ -31,10 +28,6 @@ h3 {
     font-size: calc(24px + 0.39065vw);
 }
 
-.characterwindow {
-    width: 100%;
-    height: auto;
-}
 
 .boxcontainer {
     display: flex;
@@ -42,25 +35,21 @@ h3 {
     justify-content: center;
     margin: auto;
     flex-wrap: wrap;
-
-    width: 50%;
+    width: 30%;
+    height: 100%;
+    margin-top: 10vh;
 }
 
 .box {
-    padding: 2%;
+    padding: 1vh;
     margin: 1% 0;
-    background-color: var(--colour-sand);
-    color: var(--colour-white);
     cursor: pointer;
     text-align: center;
     width: 100%;
+    height: 5vh;
+    background-color: var(--colour-sand);
 }
 
-/* alle andre end Tove */
-.box:not(:first-child) {
-    background-color: var(--Colour-sky);
-    cursor: default;
-}
 
 /* Overlay stil */
 .overlay {
@@ -70,21 +59,19 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 60%;
     max-width: 90%;
     height: 80%;
-    border: 3px solid var(--colour-black);
     padding: 20px;
     align-items: center;
     justify-content: center;
+    background-color: var(--Colour-sky);
 }
 
 .overlay-content {
     text-align: center;
-    color: var(--colour-white);
     width: 50%;
     height: 100%;
-    background-color: var(--colour-petrol);
 
 }
 
@@ -92,52 +79,30 @@ button {
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    background-color: var(--colour-red);
-    color: var(--colour-white);
 }
 
-button:hover {
-    background-color: var(--colour-sand);
-}
-
-/* ********** Dronning Tove info overlay - overlay 1 ********** */
 .info-plads {
-    width: 100%;
+    width: 75%;
     height: auto;
 }
 
-.info-plads img {
-    border-radius: 100%;
-    /* bliver den ikke rund ved 100% ? */
-}
-
 .info-indhold {
-    background-color: #c8db34;
-}
-
-video {
-    height: 10px;
-    background-color: var(--Colour-sky);
-}
-
-.forstevalg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
+    margin: auto;
 }
 
-/* ******** custom shape til billede med hjælp fra Chatgpt 
-https://chatgpt.com/share/6735e3bf-2928-8002-8ee8-ecd1b9328cb9  *** */
-.custom-shape {
-    width: 300px;
-    height: 200px;
-    background-image: url('your-image.jpg');
-    background-color: #812c1d;
-    background-size: cover;
-    background-position: center;
-    clip-path: path("M165.315 21.7629C146.923 16.481 145.33 12.7072 142.738 0.7417C142.563 1.2697 142.396 1.7833 142.234 2.2834C139.297 11.3205 137.791 15.952 121.037 21.7629H42.4161C19.2202 21.7629 0.4161 40.5669 0.4161 63.7629V160.41H286.5V63.7629C286.5 40.567 267.696 21.7629 244.5 21.7629H165.315Z");
+.info-plads p,
+.info-indhold p {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    text-align: left;
+}
+
+.info-indhold img,
+.info-plads img {
+    height: 30%;
+    width: 80%;
+    max-width: 200px;
 }
