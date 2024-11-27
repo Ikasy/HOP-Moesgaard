@@ -1,50 +1,50 @@
 const imageWrapper = document.querySelector('.image-wrapper');
-const popup = document.getElementById('popup');
-const popupText = document.getElementById('popup-text');
+const hotspotContents = document.querySelectorAll('.hotspot-content');
+const container = document.getElementById('container');
 const hotspots = document.querySelectorAll('.hotspot');
 
-document.addEventListener('mousemove', (e) => {
-  const x = (window.innerWidth / 2 - e.pageX) / 25;
-  const y = (window.innerHeight / 2 - e.pageY) / 25;
+let zoomAmount = 1; // Initial zoom level
+let rotationX = 0; // Initial X rotation
+let rotationY = 0; // Initial Y rotation
+let activeHotspotIndex = null;
 
-  // Apply 3D transform to the entire image wrapper (image + hotspots)
-  imageWrapper.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+// Mousemove event to handle rotation
+container.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  rotationX = ((rect.width / 2 - (e.pageX - rect.left)) / 25).toFixed(2);
+  rotationY = ((rect.height / 2 - (e.pageY - rect.top)) / 25).toFixed(2);
+  imageWrapper.style.transform = `rotateY(${rotationX}deg) rotateX(${rotationY}deg) scale(${zoomAmount})`;
 });
 
-hotspots.forEach(hotspot => {
-  hotspot.addEventListener('click', (e) => {
-    const info = e.target.getAttribute('data-info');
-    popupText.innerText = info;
+// Wheel event to handle zoom
+container.addEventListener('wheel', (e) => {
+  zoomAmount += e.deltaY < 0 ? 0.1 : -0.1;
+  zoomAmount = Math.min(Math.max(zoomAmount, 0.5), 2);
+  imageWrapper.style.transform = `rotateY(${rotationX}deg) rotateX(${rotationY}deg) scale(${zoomAmount})`;
+  e.preventDefault();
+});
 
-    // Get click position and popup dimensions
-    let popupX = e.pageX;
-    let popupY = e.pageY;
-    popup.style.display = 'block';
-
-    // Temporarily position the popup to get its dimensions
-    popup.style.left = `${popupX}px`;
-    popup.style.top = `${popupY}px`;
-
-    const popupRect = popup.getBoundingClientRect();
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-
-    // Adjust if the popup goes off the right edge
-    if (popupRect.right > viewportWidth) {
-      popupX -= (popupRect.right - viewportWidth + 10); // 10px padding
+// Hotspot click event to toggle popups
+hotspots.forEach((hotspot, index) => {
+  hotspot.addEventListener('click', () => {
+    if (activeHotspotIndex === index) {
+      closePopup(); // Close if the same hotspot is clicked again
+    } else {
+      closePopup(); // Close any open popup first
+      activeHotspotIndex = index;
+      hotspots.forEach(spot => (spot.style.opacity = "1"));
+      hotspot.style.opacity = "0.5"; // Highlight selected hotspot
+      hotspotContents[index].style.display = 'block'; // Show associated content
     }
-
-    // Adjust if the popup goes off the bottom edge
-    if (popupRect.bottom > viewportHeight) {
-      popupY -= (popupRect.bottom - viewportHeight + 10); // 10px padding
-    }
-
-    // Apply final position with adjustments
-    popup.style.left = `${popupX}px`;
-    popup.style.top = `${popupY}px`;
   });
 });
 
+// Function to close any open popup
 function closePopup() {
-  popup.style.display = 'none';
+  if (activeHotspotIndex !== null) {
+    hotspotContents[activeHotspotIndex].style.display = "none"; // Hide active content
+    hotspots[activeHotspotIndex].style.opacity = "1"; // Reset hotspot opacity
+    activeHotspotIndex = null; // Reset active index
+
+  }
 }
