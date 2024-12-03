@@ -117,6 +117,7 @@ header {
     font-size: 1.25rem;
     letter-spacing: calc(1.25rem * 0.3);
     text-transform: uppercase;
+    z-index: 100;
     background-color: #000000cc;
 }
 
@@ -162,10 +163,32 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     background: url('images/moder-jord-moesgaard-museum-saerudstilling.jpg') no-repeat center/cover;
+    /* transition: all 1s ease; */
 }
 
+#heroDots{
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+
+    display: flex;
+    gap:1rem;
+
+    transform: translateX(-50%);
+
+}
+.dot{
+    width: 1rem; 
+    aspect-ratio: 1/1;
+    background-color: #F6F3EF;
+    border-radius: 100px;
+    border: #F6F3EF 3px solid;
+    box-sizing: unset;
+    transition: all 1s ease;
+}
 #experience {
     background: url('images/jgd_2017_03_08_0050.jpg') no-repeat center/cover;
     color: #F6F3EF;
@@ -177,7 +200,7 @@ header img {
     letter-spacing: calc(1.25rem * 0.07);
     text-transform: uppercase;
     width: fit-content;
-    margin: 0 auto 5% auto;
+    margin: 0 auto 2rem auto;
 }
 
 .hero .buttonFill {
