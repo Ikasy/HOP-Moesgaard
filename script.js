@@ -5,7 +5,7 @@ const dots = document.querySelectorAll(".dot");
 
 let heroTitles = [
     "Moder jord", 
-    "Jernalder",
+    "Stenalder",
     "Kriger"
 ];
 let heroUnderTitles = [
@@ -14,9 +14,9 @@ let heroUnderTitles = [
     "22. mar. 2024 - Efteråret 2025"
 ];
 let heroBackgrounds = [
-    "url('images/moder-jord-moesgaard-museum-saerudstilling.jpg') no-repeat center/cover",
-    "url('images/jgd_2017_03_08_0050.jpg') no-repeat center/cover",
-    "url('images/krigerne-m-hvid-tekst-test.jpg') no-repeat center/cover"
+    "url('images/moder-jord-moesgaard-museum-saerudstilling1920x1080.png') no-repeat center/cover",
+    "url('images/muslingpige.png') no-repeat center/cover",
+    "url('images/krigerne-m-hvid-tekst-test1920x1080.png') no-repeat center/cover"
 ];
 let heroColors = [
     "#1A1A1A",
