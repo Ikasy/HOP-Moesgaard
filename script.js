@@ -1,8 +1,15 @@
 const heroTitle = document.getElementById("heroTitle");
 const heroUnderTitle = document.getElementById("heroUnderTitle"); // Corrected ID
+const newsletterCTA = document.getElementById("newsletterCTA"); // Corrected ID
+const newsletterContent = document.getElementById("newsletterContent"); // Corrected ID
+const newsletterinput = document.getElementById("newsletterinput"); // Corrected ID
+const burgerMenu = document.getElementById("burgerMenu"); // Corrected ID
+const email = document.getElementById("email"); // Corrected ID
+const navIcon = document.getElementById("navIcon"); // Corrected ID
 const hero = document.querySelector(".hero");
+const header = document.querySelector("header");
 const dots = document.querySelectorAll(".dot");
-
+let timesClicked = 0
 let heroTitles = [
     "Moder jord", 
     "Stenalder",
@@ -15,7 +22,7 @@ let heroUnderTitles = [
 ];
 let heroBackgrounds = [
     "url('images/moder-jord-moesgaard-museum-saerudstilling1920x1080.png') no-repeat center/cover",
-    "url('images/muslingpige.png') no-repeat center/cover",
+    "url('images/muslingpige.png') no-repeat left/cover",
     "url('images/krigerne-m-hvid-tekst-test1920x1080.png') no-repeat center/cover"
 ];
 let heroColors = [
@@ -41,5 +48,63 @@ function updateHero() {
     setTimeout(updateHero, 5000);
 }
 
+function openNewsletter(e){
+    e.preventDefault();
+    console.log(window.innerWidth)
+    if(window.innerWidth < 600 && timesClicked <= 1){
+        newsletterCTA.style.display = "block"
+        newsletterContent.style.backgroundColor = "#fff"
+        newsletterinput.style.width = "100%"
+        newsletterContent.style.marginTop = "1rem"
+        newsletterCTA.style.padding = "1rem 5%"
+        newsletterCTA.style.height = "fit-content"
+        email.style.display = "unset"
+        email.style.width = "100%"
+        timesClicked++
+    }
+    if (timesClicked == 2){
+        email.value = '';
+        const confirmationMessage = document.createElement('p');
+        confirmationMessage.textContent = 'Du er nu tilmeldt nyhedsbrevet!';
+        newsletterCTA.appendChild(confirmationMessage);
+        setTimeout(() => {
+            newsletterCTA.style.display = "flex";
+            newsletterContent.style.backgroundColor = "";
+            newsletterinput.style.width = "";
+            newsletterContent.style.marginTop = "";
+            newsletterCTA.style.padding = "";
+            newsletterCTA.style.height = "";
+            email.style.display = "none";
+            email.style.width = "";
+            timesClicked = 0;
+            confirmationMessage.remove();
+        }, 3000);
+    }
+   
+}
+
+
+
+function toggleBurger(e){
+    e.preventDefault();
+    burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
+    header.style.backgroundColor = (header.style.backgroundColor === '#121212') ? '#121212cc' : '#121212';
+    navIcon.classList.contains('fa-xmark') ? navIcon.classList.remove('fa-xmark') : navIcon.classList.add('fa-xmark');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 updateHero();
+
 

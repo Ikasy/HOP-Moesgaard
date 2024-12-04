@@ -10,7 +10,6 @@
 
 html {
     font-size: clamp(10px, calc(9px + 0.390625vw), 16px);
-
 }
 
 body {
@@ -112,13 +111,14 @@ header {
     padding: 0 1vw;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     font-weight: 500;
     font-size: 1.25rem;
     letter-spacing: calc(1.25rem * 0.3);
     text-transform: uppercase;
     z-index: 100;
-    background-color: #000000cc;
+    background-color: #121212cc;
 }
 
 .headerSize {
@@ -151,17 +151,61 @@ header img {
 .extraNav p {
     margin-right: 5vw;
 }
-.headerLogo{
+
+.headerLogo {
     width: 70%;
     height: fit-content;
 }
 
+.phoneHead {
+    display: none;
+}
 
+.pcHead {
+    display: flex;
+}
+
+#burgerMenu{
+    position:absolute;
+    left: 0;
+    bottom: 1px;
+    transform: translateY(100%);
+    width: 100vw;
+    display: none;
+    justify-content: right;
+    padding: 2% 4%;
+    background-color: #1A1A1A;
+}
+#burgerMenu a{
+    display: block;
+    text-align: right;
+    margin: 1rem 0;
+    letter-spacing: calc(1.25rem * 0.1);
+
+}
+.burgerLink{
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: calc(2rem * 0.07);
+    text-transform: uppercase;
+}
+.BurgerVerticalLine{
+    width: 5px;
+    margin-left: 1rem;
+    background-color: #FF5964;
+    border-radius: 100px;
+}
+.horizontalLine{
+    width: 100%;
+    height: 3px;
+    background-color: #F6F3EF;
+    border-radius: 100px;
+}
 /* hero */
 
 .hero {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     color: #1A1A1A;
     display: flex;
     align-items: center;
@@ -171,41 +215,47 @@ header img {
     background: url('images/moder-jord-moesgaard-museum-saerudstilling1920x1080.png') no-repeat center/cover;
     transition: all 1s ease;
 }
-.trumpet{
+
+.trumpet {
     justify-content: left;
     align-items: end;
-    padding:0 10% 5% 10%;
+    padding: 0 10% 5% 10%;
     color: #F6F3EF;
 }
 
-#heroDots{
+#heroDots {
     position: absolute;
     left: 50%;
     bottom: 2rem;
 
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 
     transform: translateX(-50%);
 
 }
-.dot{
-    width: 1rem; 
+
+.dot {
+    width: 1rem;
     aspect-ratio: 1/1;
     background-color: #F6F3EF;
     border-radius: 100px;
     border: #F6F3EF 3px solid;
     box-sizing: unset;
-    transition: all 1s ease;
+    transition: background-image 1s ease;
+    transition: color 1s ease;
 }
+
 #experience {
     background: url('images/jgd_2017_03_08_0050.jpg') no-repeat center/cover;
     color: #F6F3EF;
 }
-#ironage{
+
+#ironage {
     background: url('images/onkelgrauballe.jpg') no-repeat center/cover;
 }
-#viking{
+
+#viking {
     background: url('images/vikingetiden.jpg') no-repeat center/cover;
 }
 
@@ -217,10 +267,12 @@ header img {
     width: fit-content;
     margin: 0 auto 2rem auto;
 }
-.specific{
+
+.specific {
     margin: 0 0 2rem auto;
 
 }
+
 .overTitle {
     font-weight: 900;
     font-size: 1.25rem;
@@ -241,10 +293,11 @@ header img {
     padding: 0 10%;
     height: 4.5rem;
     background-color: #121212;
+    position: relative;
 
 }
 
-.CTAline div {
+.CTAline div{
     display: flex;
     background-color: #fff;
     border-radius: 100px;
@@ -258,6 +311,22 @@ header img {
     border-radius: 100px;
 }
 
+.newsletterPopup{
+    transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212 ;
+    text-align: center;
+    border-radius: unset;
+}
+.newsletterPopup input{
+    border: none;
+    border-radius: 100px;
+    padding: 0.2rem;
+    padding-left: 1rem;
+}
 
 
 /* Halv billede halv tekst */
@@ -323,14 +392,11 @@ header img {
     justify-content: space-between;
     margin: 1rem 0 3rem 0;
     overflow-x: scroll;
+    gap: 2rem;
 }
 
 .exhibits::-webkit-scrollbar {
     display: none;
-}
-
-.exhibitCard {
-    margin-right: 3vw;
 }
 
 .exhibitCard p {
@@ -355,7 +421,7 @@ header img {
 /* Billede sektion */
 .image {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     color: #F6F3EF;
     display: flex;
     align-items: center;
@@ -371,7 +437,7 @@ header img {
 }
 
 #tour {
-    background: url('images/MJ_2021_07_26_029.jpg') no-repeat top/cover fixed;
+    background: url('images/rundvisning.jpg') no-repeat top/cover fixed;
 }
 
 
@@ -399,4 +465,143 @@ header img {
 footer {
     height: 50vh;
     background-color: #121212;
+}
+
+
+@media screen and (max-width:900px) {
+    h1 {
+        font-size: 5rem;
+        letter-spacing: calc(5rem * 0.07);
+    }
+    
+
+    
+    p {
+        font-weight: 500;
+        font-size: 1.25rem;
+        letter-spacing: calc(1.25rem * 0.03);
+    }
+    
+    .buttonFill {
+        font-size: 1rem;
+        letter-spacing: calc(1rem * 0.07);
+    }
+    
+    .buttonOutline {
+        font-size: 1rem;
+        letter-spacing: calc(1rem * 0.07);
+    }
+
+
+    
+    .dot {
+        width: 0.75rem;
+        border: #F6F3EF 2px solid;
+    }
+    
+    .image div {
+        width: 70%;
+    }
+
+    #tour div {
+        width: 70%;
+        margin: unset;
+    }
+
+
+
+
+
+
+
+
+
+    .pcHead {
+        display: none;
+    }
+
+    .phoneHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+    .headerLogo {
+        width: 50%;
+    }
+
+    /* Halv billede halv tekst */
+    .halfImgHalfText {
+        display: block;
+        height: 100vh;
+    }
+
+    .halfImgHalfText img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .halfText {
+        width: 100%;
+        height: 50%;
+    }
+    .halfTextOpen{
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        height: 60%;
+    }
+    .halfTextOpenImg{
+        height: 40% !important;
+    }
+    .verticalLine{
+        height: 100% ;
+    }
+
+    .moreInfo {
+        margin: unset;
+        margin-left: auto;
+    }
+    .CTAline {
+        padding: 0 5%;
+    }
+    .exhibitContainer {
+        padding: 7vh 5%;
+    }
+}
+@media screen and (max-width:600px) {
+    h3{
+        font-size: 1.5rem;
+        letter-spacing: calc(1.5rem * 0.07);
+    }
+
+    .CTAline div{
+        background-color: unset;
+    }
+    .CTAline div input {
+        display: none;
+    }
+    
+
+
+}
+@media screen and (max-width:450px) {
+    .fa-arrow-right {
+        border: 2px solid #F6F3EF;
+    }
+    h1 {
+        font-size: 4rem;
+        letter-spacing: calc(4rem * 0.07);
+    }
+     
+    .image div {
+        width: 100%;
+    }
+
+    #tour div {
+        width: 100%;
+        margin: unset;
+    }
 }
