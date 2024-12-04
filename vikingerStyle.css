@@ -3,17 +3,16 @@ body {
     margin: 0;
     font-family: "museo-sans", sans-serif;
     font-weight: 300;
+    background-color: #121212;
 }
 
 
 
 :root {
-    --colour-white: #ebe8e2;
-    --colour-black: #221d0e;
-    --colour-red: #812c1d;
-    --colour-sand: #BB9B81;
-    --colour-petrol: #254441;
-    --Colour-sky: #a8c2d0;
+    --colour-white: #f6f3ef;
+    --colour-black: #121212;
+    --colour-red: #FF5964;
+    --Colour-sky: #1a1a1a;
 }
 
 a {
@@ -22,10 +21,16 @@ a {
 
 h2 {
     font-size: calc(28px + 0.39065vw);
+    color: var(--colour-white);
 }
 
 h3 {
     font-size: calc(24px + 0.39065vw);
+    color: var(--colour-white);
+}
+
+p {
+    color: var(--colour-white);
 }
 
 
@@ -45,63 +50,122 @@ h3 {
     margin: 1% 0;
     cursor: pointer;
     text-align: center;
+    justify-content: center;
     width: 100%;
-    height: 5vh;
-    background-color: var(--colour-sand);
+    height: 7vh;
+    background-color: var(--colour-white);
+    color: var(--colour-black);
+    border-radius: 100px;
 }
 
-
-/* Overlay stil */
 .overlay {
     display: none;
-    /* Starter med at skjule alle overlays */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 80%;
+    width: 30%;
+    height: 90%;
     padding: 20px;
-    align-items: center;
-    justify-content: center;
     background-color: var(--Colour-sky);
 }
 
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    z-index: 10;
+}
+
 .overlay-content {
+    margin-top: 60px;
     text-align: center;
-    width: 80%;
-    height: 100%;
-
-}
-
-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.info-plads {
-    width: 80%;
-    height: auto;
-}
-
-.info-indhold {
     width: 100%;
-    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-plads,
+.info-indhold {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .info-plads p,
 .info-indhold p {
-    width: 80%;
-    margin: auto;
-    font-size: 20px;
-    text-align: left;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: justify;
 }
 
 .info-indhold img,
 .info-plads img {
-    height: 30%;
-    width: 80%;
+    height: auto;
+    width: 100%;
     max-width: 200px;
+    margin: 10px 0;
+}
+
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--Colour-sky);
+    border: 1px var(--colour-white) solid;
+    color: var(--colour-white);
+    border-radius: 100px;
+    padding: 10px 15px;
+    margin: 2%;
+}
+
+button:hover {
+    background-color: var(--colour-red);
+    border: none;
+    color: var(--colour-white);
+}
+
+@media screen and (max-width: 1300px) {
+
+    .overlay,
+    .boxcontainer {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .overlay,
+    .boxcontainer {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .overlay,
+    .boxcontainer {
+        width: 85%;
+        height: 100%;
+    }
+
+    .info-plads,
+    .info-indhold {
+        width: 100%;
+    }
+
+    .controls {
+        width: 90%;
+        margin-top: 5%;
+    }
 }
