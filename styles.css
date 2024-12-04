@@ -212,7 +212,7 @@ header img {
     justify-content: center;
     position: relative;
 
-    background: url('images/moder-jord-moesgaard-museum-saerudstilling1920x1080.png') no-repeat center/cover;
+    background: url('images/ModerJordHero.png') no-repeat center/cover;
     transition: all 1s ease;
 }
 
@@ -247,7 +247,7 @@ header img {
 }
 
 #experience {
-    background: url('images/jgd_2017_03_08_0050.jpg') no-repeat center/cover;
+    background: url('images/muslingpige.webp') no-repeat center/cover;
     color: #F6F3EF;
 }
 
@@ -437,7 +437,7 @@ header img {
 }
 
 #tour {
-    background: url('images/rundvisning.jpg') no-repeat top/cover fixed;
+    background: url('images/rundvisning.webp') no-repeat top/cover fixed;
 }
 
 

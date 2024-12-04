@@ -21,9 +21,9 @@ let heroUnderTitles = [
     "22. mar. 2024 - Efteråret 2025"
 ];
 let heroBackgrounds = [
-    "url('images/moder-jord-moesgaard-museum-saerudstilling1920x1080.png') no-repeat center/cover",
-    "url('images/muslingpige.png') no-repeat left/cover",
-    "url('images/krigerne-m-hvid-tekst-test1920x1080.png') no-repeat center/cover"
+    "url('images/ModerJordHero.png') no-repeat center/cover",
+    "url('images/muslingpige.webp') no-repeat left/cover",
+    "url('images/KrigerHero.png') no-repeat center/cover"
 ];
 let heroColors = [
     "#1A1A1A",

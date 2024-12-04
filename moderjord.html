@@ -13,28 +13,52 @@
 <body>
 
     <header>
-        <div class="headerSize">
-            <a href="index.html" class="headerLogo"><img src="images/Logo.png"  alt="Moesgaard Museum logo"></a>
-            
-        </div>
-        <div class="headerSize">
-            <nav>
-                <a href="oplev.html">Oplev</a>
-                <a href="#">Besøg</a>
-                <a href="#">Køb</a>
-            </nav>
-        </div>
+        <div class="pcHead">
+            <div class="headerSize">
+                <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
 
-        <div class="headerSize extraNav">
-            <p>Åben: 10-17</p>
-            
-            <div>
-                <a href="#"><i class="fa-solid fa-globe"></i></a>
-                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#"><i class="fa-solid fa-bars "></i></a>
+            </div>
+            <div class="headerSize">
+                <nav>
+                    <a href="oplev.html">Oplev</a>
+                    <a href="#">Besøg</a>
+                    <a href="#">Køb</a>
+                </nav>
+            </div>
+
+            <div class="headerSize extraNav">
+                <p>Åben: 10-17</p>
+
+                <div>
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-bars "></i></a>
+                </div>
             </div>
         </div>
+        <div class="phoneHead">
+            <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
+            <a href="#" onclick="toggleBurger(event)"><i id="navIcon" class="fa-solid fa-bars "></i></a>
+        </div>
+
+
+        <div id="burgerMenu">
+            <div>
+                <a class="burgerLink" href="oplev.html">oplev</a>
+                <a class="burgerLink" href="">Besøg</a>
+                <a class="burgerLink" href="">køb</a>
+
+                <div class="horizontalLine"></div>
+                <a href="">Erhverv, møder og events</a>
+                <a href="">Forskning og undersøgelser</a>
+                <a href="">Rådgivning for bygherrer</a>
+                <a href="">Job og karriere</a>
+                <a href="">Moesgaards 10-årsjubilæum</a>
+            </div>
+            <div class="BurgerVerticalLine"></div>
+        </div>
     </header>
+
 
     <div class="hero">
         <div>
@@ -131,7 +155,7 @@
         <h2>Digitale fortællinger</h2>
         <div class="exhibits">
             <a href="moderjord.html" class="exhibitCard">
-                <img src="images/egypten.jpg" alt="Moder jord">
+                <img src="images/egypten.webp" alt="Moder jord">
                 <p>Egypten </p>
                 <p class="exhibitSubTitle">Besat af Livet</p>
             </a>
@@ -148,7 +172,7 @@
 
             </div>
             <div class="exhibitCard">
-                <img src="images/nean.jpg" alt="Moder jord">
+                <img src="images/nean.webp" alt="Moder jord">
                 <p>Neandertaler</p>
                 <p class="exhibitSubTitle">I mamutjægerens land</p>
 
@@ -160,7 +184,7 @@
 
             </div>
             <div class="exhibitCard">
-                <img src="images/djengis.jpg" alt="Moder jord">
+                <img src="images/djengis.webp" alt="Moder jord">
                 <p>På Djengis Khans stepper</p>
                 <p class="exhibitSubTitle">Mongoliets nomader</p>
 
