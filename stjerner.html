@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stjerner</title>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/6978fc69bd.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stjernerStyle.css">
+    <script src="stjernerjs.js" defer></script>
+    
+
 </head>
 <body>
+    <header>
+        <div class="pcHead">
+            <div class="headerSize">
+                <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
+
+            </div>
+            <div class="headerSize">
+                <nav>
+                    <a href="oplev.html">Oplev</a>
+                    <a href="#">Besøg</a>
+                    <a href="#">Køb</a>
+                </nav>
+            </div>
+
+            <div class="headerSize extraNav">
+                <p>Åben: 10-17</p>
+
+                <div>
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-bars "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="phoneHead">
+            <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
+            <a href="#" onclick="toggleBurger(event)"><i id="navIcon" class="fa-solid fa-bars "></i></a>
+        </div>
+
+
+        <div id="burgerMenu">
+            <div>
+                <a class="burgerLink" href="oplev.html">oplev</a>
+                <a class="burgerLink" href="">Besøg</a>
+                <a class="burgerLink" href="">køb</a>
+
+                <div class="horizontalLine"></div>
+                <a href="">Erhverv, møder og events</a>
+                <a href="">Forskning og undersøgelser</a>
+                <a href="">Rådgivning for bygherrer</a>
+                <a href="">Job og karriere</a>
+                <a href="">Moesgaards 10-årsjubilæum</a>
+            </div>
+            <div class="BurgerVerticalLine"></div>
+        </div>
+    </header>
     
+    <div class="scrollable">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div class="stjernetekst">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis facilis quia qui, ullam iusto natus vero iste minima aliquam in placeat assumenda enim quod esse sit dolore rem dolorem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis facilis quia qui, ullam iusto natus vero iste minima aliquam in placeat assumenda enim quod esse sit dolore rem dolorem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis facilis quia qui, ullam iusto natus vero iste minima aliquam in placeat assumenda enim quod esse sit dolore rem dolorem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo perferendis facilis quia qui, ullam iusto natus vero iste minima aliquam in placeat assumenda enim quod esse sit dolore rem dolorem.</p>
+        </div>
+        <img id="img_01" src="images/stjerner/stjerner.png" alt="">
+        <img id="img_02" src="images/stjerner/front.png" alt="">
+    </div>
 </body>
 </html>
