@@ -453,12 +453,13 @@ header img {
 
 .doubleTextText {
     display: flex;
+    width: 100%;
     gap: 3rem;
-
 }
 
-.doubleTextText p {
+.doubleTextText div {
     margin: 1rem 0;
+    width: 100%;
 }
 
 /* footer */
@@ -474,8 +475,12 @@ footer {
         letter-spacing: calc(5rem * 0.07);
     }
     
-
-    
+    .trumpet {
+        padding: 0 5% 5% 5%;
+    }
+    .doubleTextText {
+        display: block;
+    }
     p {
         font-weight: 500;
         font-size: 1.25rem;
@@ -507,14 +512,6 @@ footer {
         width: 70%;
         margin: unset;
     }
-
-
-
-
-
-
-
-
 
     .pcHead {
         display: none;
@@ -583,7 +580,9 @@ footer {
     .CTAline div input {
         display: none;
     }
-    
+    .trumpet {
+        padding: 0 2.5% 5% 2.55%;
+    }
 
 
 }
