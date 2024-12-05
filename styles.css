@@ -461,6 +461,10 @@ header img {
     margin: 1rem 0;
     width: 100%;
 }
+.background{
+    background-color: #1a1a1a;
+    padding: 0.5rem 0;
+}
 
 /* footer */
 footer {
