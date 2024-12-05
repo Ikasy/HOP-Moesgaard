@@ -465,6 +465,10 @@ header img {
     background-color: #1a1a1a;
     padding: 0.5rem 0;
 }
+.GrauballeBackground{
+    background-image: url(/images/grauballe/GBBG.png);
+}
+
 
 /* footer */
 footer {
