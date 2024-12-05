@@ -1,16 +1,254 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moesgaard</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/6978fc69bd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <a href="grauballe.html">Grauballe</a>
-    <a href="vikinger.html">Vikinger</a>
-    <a href="stjerner.html">Sterner</a>
-    <div class="test"></div>
+
+    <header>
+        <div class="pcHead">
+            <div class="headerSize">
+                <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
+
+            </div>
+            <div class="headerSize">
+                <nav>
+                    <a href="oplev.html">Oplev</a>
+                    <a href="#">Besøg</a>
+                    <a href="#">Køb</a>
+                </nav>
+            </div>
+
+            <div class="headerSize extraNav">
+                <p>Åben: 10-17</p>
+
+                <div>
+                    <a href="#"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-bars "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="phoneHead">
+            <a href="index.html" class="headerLogo"><img src="images/Logo.png" alt="Moesgaard Museum logo"></a>
+            <a href="#" onclick="toggleBurger(event)"><i id="navIcon" class="fa-solid fa-bars "></i></a>
+        </div>
+
+
+        <div id="burgerMenu">
+            <div>
+                <a class="burgerLink" href="oplev.html">oplev</a>
+                <a class="burgerLink" href="">Besøg</a>
+                <a class="burgerLink" href="">køb</a>
+
+                <div class="horizontalLine"></div>
+                <a href="">Erhverv, møder og events</a>
+                <a href="">Forskning og undersøgelser</a>
+                <a href="">Rådgivning for bygherrer</a>
+                <a href="">Job og karriere</a>
+                <a href="">Moesgaards 10-årsjubilæum</a>
+            </div>
+            <div class="BurgerVerticalLine"></div>
+        </div>
+    </header>
+
+
+    <div class="hero">
+        <div>
+            <h1 id="heroTitle">Moder Jord</h1>
+            <p class="underTitle" id="heroUnderTitle">11. okt. 2024 - 10. aug. 2025</p>
+            <a href="#" class="buttonFill" id="heroButton">Læs mere</a>
+        </div>
+        <div id="heroDots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="CTAline">
+        <h3>Billetter og årskort</h3>
+        <a href="#" class="buttonFill">Køb her</a>
+    </div>
+
+    <div class="halfImgHalfText">
+        <img class="halfTextOpenImg" src="images/moesgaardudefra.png" alt="Moesgaard Museum udefra">
+        <div class="halfTextOpen">
+            <h2>åbningstider</h2>
+            <div class="content">
+                <div class="dates">
+                    <p>Mandag</p>
+                    <p>Tirsdag</p>
+                    <p>Onsdag</p>
+                    <p>Torsdag</p>
+                    <p>Fredag</p>
+                    <p>Lørdag</p>
+                    <p>Søndag</p>
+                </div>
+                <div class="verticalLine"></div>
+                <div class="dates">
+                    <p>Lukket</p>
+                    <p>10 - 17</p>
+                    <p>10 - 21</p>
+                    <p>10 - 17</p>
+                    <p>10 - 17</p>
+                    <p>10 - 21</p>
+                    <p>10 - 17</p>
+                </div>
+            </div>
+            <a href="" class="moreInfo Info">Flere informationer <i class="fa-solid fa-arrow-right"></i> </a>
+        </div>
+    </div>
+
+    <div class="exhibitContainer">
+        <h2>Udstillinger</h2>
+        <div class="exhibits">
+            <a href="moderjord.html" class="exhibitCard">
+                <img src="images/moderJordKort.jpg" alt="Moder jord">
+                <p>Moder Jord</p>
+            </a>
+            <div class="exhibitCard">
+                <img src="images/Kriger.webp" alt="Moder jord">
+                <p>Kriger</p>
+            </div>
+
+            <div class="exhibitCard">
+                <img src="images/muslingpigeSmal.webp" alt="Moder jord">
+                <p>Stenalder</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/BorumEshojKort.webp" alt="Moder jord">
+                <p>Bronzealder</p>
+            </div>
+            <a href="jernalderen.html" class="exhibitCard">
+                <img src="images/grauballemanden-moesgaard-museum.jpg" alt="Moder jord">
+                <p>Jernalder</p>
+            </a>
+
+            <a href="vikingetiden.html" class="exhibitCard">
+                <img src="images/vikingetiden.jpg" alt="Moder jord">
+                <p>Vikingetiden</p>
+            </a>
+            <div class="exhibitCard">
+                <img src="images/middelalder.webp" alt="Moder jord">
+                <p>Middelalder</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/modmennesket.jpg" alt="Moder jord">
+                <p>Mød mennesket</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/ctrl_alt_repair_cuba_udstilling_moesgaard.webp" alt="Moder jord">
+                <p>Ctrl + Alt + Repair</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image" id="moesgaard">
+        <div>
+            <h2>Moesgaard</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta luctus auctor. Curabitur ultrices
+                quam vitae convallis sollicitudin. Etiam nec volutpat arcu, a viverra dui. Aliquam erat volutpat.</p>
+            <a href="#" class="buttonOutline">Læs mere</a>
+        </div>
+    </div>
+
+    <div class="halfImgHalfText">
+        <div class="halfText">
+            <div>
+                <h2>Café</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta luctus auctor. Curabitur
+                    ultrices quam vitae convallis sollicitudin. Etiam nec volutpat arcu, a viverra dui. Aliquam erat
+                    volutpat.</p>
+                <a href="#" class="buttonOutline">Læs mere</a>
+            </div>
+        </div>
+        <img src="images/CafeMad.webp" alt="Moesgaard Museum udefra">
+
+    </div>
+
+    <div class="exhibitContainer">
+        <h2>Nyheder</h2>
+        <div class="exhibits">
+            <div class="exhibitCard">
+                <img src="images/trine_kellberg9.jpg" alt="Moder jord">
+                <p>Moesgaards Ansigter:
+                    Trine Kellberg Nielsen </p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/moesgaard-4.jpg" alt="Moder jord">
+                <p>Moesgaard kåret som Danmarks bedste attraktion</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/esltedgaard_soelv4.webp" alt="Moder jord">
+                <p>Sølvskat fra vikingetiden fundet ved Aarhus</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/visionsskitse_bispetorv_finalsmall.jpg" alt="Moder jord">
+                <p>Et vikingemuseum i verdensklasse skal ligge i hjertet af Aarhus</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/krigerkvinde_hedega-rd.webp" alt="Moder jord">
+                <p>2000 år gammel krigerkvinde begravet ved militært centrum i Midtjylland </p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/egyptisk_moebelkunst_37.webp" alt="Moder jord">
+                <p>Små møbler med en stor historie</p>
+            </div>
+            <div class="exhibitCard">
+                <img src="images/tagkonstruktion_boersen_moesgaard.jpg" alt="Moder jord">
+                <p>Moesgaard undersøgte Børsens tømmer</p>
+            </div>
+        </div>
+
+        <a href="" class="moreInfo">Flere nyheder <i class="fa-solid fa-arrow-right"></i> </a>
+    </div>
+
+    <div class="CTAline" id="newsletterCTA">
+        <h3>Tilmeld nyhedsbrev</h3>
+        <div id="newsletterContent">
+            <div id="newsletterinput">
+                <input type="email" name="email" id="email" placeholder="Indtast E-mail" />
+            </div>
+            <a href="#" class="buttonFill" onclick="openNewsletter(event)">Tilmeld</a>
+        </div>
+    
+    </div>
+    
+    <div class="image" id="tour">
+        <div>
+            <h2>Guidet tur</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta luctus auctor. Curabitur ultrices
+                quam vitae convallis sollicitudin. Etiam nec volutpat arcu, a viverra dui. Aliquam erat volutpat.</p>
+            <a href="#" class="buttonOutline">Læs mere</a>
+        </div>
+    </div>
+
+    <div class="halfImgHalfText">
+        <img src="images/podcast.webp" alt="Moesgaard Museum udefra">
+        <div class="halfText">
+            <div>
+                <h2>Podcast</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta luctus auctor. Curabitur
+                    ultrices quam vitae convallis sollicitudin. Etiam nec volutpat arcu, a viverra dui. Aliquam erat
+                    volutpat.</p>
+                <a href="#" class="buttonOutline">Læs mere</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+
 </body>
+
 </html>
