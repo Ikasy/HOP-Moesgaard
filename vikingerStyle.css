@@ -15,22 +15,31 @@ body {
     --Colour-sky: #1a1a1a;
 }
 
+
+html {
+    font-size: clamp(10px, calc(9px + 0.390625vw), 16px);
+}
+
 a {
     text-decoration: none;
 }
 
 h2 {
-    font-size: calc(28px + 0.39065vw);
+    font-size: 2rem;
     color: var(--colour-white);
+    letter-spacing: calc(2rem * 0.07);
 }
 
 h3 {
-    font-size: calc(24px + 0.39065vw);
+    font-size: calc(1.5rem + 0.39065vw);
     color: var(--colour-white);
+    letter-spacing: calc(1.5rem * 0.07);
 }
 
 p {
+    font-size: 1.25rem;
     color: var(--colour-white);
+    letter-spacing: calc(2rem * 0.07);
 }
 
 
@@ -49,13 +58,26 @@ p {
     padding: 1vh;
     margin: 1% 0;
     cursor: pointer;
-    text-align: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 7vh;
     background-color: var(--colour-white);
     color: var(--colour-black);
     border-radius: 100px;
+
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: calc(1.25rem * 0.07);
+}
+
+.box:hover {
+    background-color: var(--colour-red);
+    border: none;
+    color: var(--colour-white);
+    transition: 0.3s;
 }
 
 .overlay {
@@ -122,11 +144,15 @@ button {
     font-weight: bold;
     cursor: pointer;
     background-color: var(--Colour-sky);
-    border: 1px var(--colour-white) solid;
+    border: 2px var(--colour-white) solid;
     color: var(--colour-white);
     border-radius: 100px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     margin: 2%;
+
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: calc(1.25rem * 0.07);
 }
 
 button:hover {
