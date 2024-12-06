@@ -96,6 +96,47 @@ function toggleBurger(e){
 
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const exhibitContainers = document.querySelectorAll(".exhibitContainer");
+
+    exhibitContainers.forEach(container => {
+        const leftArrow = container.querySelector(".arrows svg:first-child");
+        const rightArrow = container.querySelector(".arrows svg:last-child");
+        const exhibits = container.querySelector(".exhibits");
+console.log(exhibits.scrollWidth - exhibits.clientWidth);
+
+
+        // Function to check the scroll position and toggle arrow visibility
+        const updateArrowVisibility = () => {
+            console.log(exhibits.scrollLeft);
+            leftArrow.style.visibility = exhibits.scrollLeft > 0 ? "visible" : "hidden";
+            rightArrow.style.visibility = exhibits.scrollLeft < exhibits.scrollWidth - exhibits.clientWidth - 1 ? "visible" : "hidden";
+
+        };
+
+        // Scroll left by a fixed amount
+        leftArrow.addEventListener("click", () => {
+            exhibits.scrollBy({
+                left: -200,
+                behavior: "smooth"
+            });
+        });
+
+        // Scroll right by a fixed amount
+        rightArrow.addEventListener("click", () => {
+            exhibits.scrollBy({
+                left: 200,
+                behavior: "smooth"
+            });
+        });
+
+        // Add a scroll event listener to update arrow visibility
+        exhibits.addEventListener("scroll", updateArrowVisibility);
+
+        // Initialize arrow visibility on page load
+        updateArrowVisibility();
+    });
+});
 
 
 
