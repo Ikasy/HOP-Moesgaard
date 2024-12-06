@@ -13,23 +13,23 @@ const dots = document.querySelectorAll(".dot");
 let timesClicked = 0
 let heroTitles = [
     "Moder jord", 
-    "Stenalder",
+    "Jernalderen",
     "Kriger"
 ];
 let heroUnderTitles = [
     "11. okt. 2024 - 10. aug. 2025", 
-    "Livet i fortidens landsbyer",
+    "Mød fortidens moselig",
     "22. mar. 2024 - Efteråret 2025"
 ];
 let heroBackgrounds = [
     "url('images/ModerJordHero.png') no-repeat center/cover",
-    "url('images/muslingpige.webp') no-repeat left/cover",
+    "url('images/onkelgrauballe.jpg') no-repeat left/cover",
     "url('images/KrigerHero.png') no-repeat center/cover"
 ];
 
 let heroLinks = [
     "moderjord.html",
-    "#",
+    "jernalderen.html",
     "#"
 ]
 
