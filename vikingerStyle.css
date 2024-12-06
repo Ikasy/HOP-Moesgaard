@@ -37,7 +37,6 @@ h3 {
     align-items: end;
     width: 19.22%;
     aspect-ratio: 1/1;
-    background: url(images/Vikinger/Lillearne.jpg);
     color: var(--colour-white);
 
     background-size: cover;
@@ -48,7 +47,47 @@ h3 {
 }
 .box:first-child{
     filter: brightness(1);
+    background: url(images/Vikinger/dronningTove.webp);
+    background-position: center;
+    background-size: cover;
 }
+.box:nth-child(2){
+    background: url(images/Vikinger/bispReginbrand.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(3){
+    background: url(images/Vikinger/erikFraRandlev.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(4){
+    background: url(images/Vikinger/haraldHaarderaade.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(5){
+    background: url(images/Vikinger/hikuinSnedker.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(6){
+    background: url(images/Vikinger/lilleArne.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(7){
+    background: url(images/Vikinger/randlevkvinden.webp);
+    background-position: center;
+    background-size: cover;
+}
+.box:nth-child(8){
+    background: url(images/Vikinger/arkaeologInfo.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
 .box p{
     font-weight: 700;
     padding: 1rem;
@@ -57,11 +96,6 @@ h3 {
     text-align: center;
     border-radius:0 0  .5rem .5rem;
 
-}
-.tove{
-    background: url(images/Vikinger/OlgaPlaceholder.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .box:hover {

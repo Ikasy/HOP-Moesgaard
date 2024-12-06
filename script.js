@@ -1,5 +1,6 @@
 const heroTitle = document.getElementById("heroTitle");
 const heroUnderTitle = document.getElementById("heroUnderTitle"); // Corrected ID
+const heroButton = document.getElementById("heroButton"); // Corrected ID
 const newsletterCTA = document.getElementById("newsletterCTA"); // Corrected ID
 const newsletterContent = document.getElementById("newsletterContent"); // Corrected ID
 const newsletterinput = document.getElementById("newsletterinput"); // Corrected ID
@@ -25,9 +26,11 @@ let heroBackgrounds = [
     "url('images/muslingpige.webp') no-repeat left/cover",
     "url('images/KrigerHero.png') no-repeat center/cover"
 ];
-let heroColors = [
-    "#1A1A1A",
-    "#F6F3EF"
+
+let heroLinks = [
+    "moderjord.html",
+    "#",
+    "#"
 ]
 
 let index = 0;
@@ -36,11 +39,11 @@ function updateHero() {
     heroTitle.innerHTML = heroTitles[index];
     heroUnderTitle.innerHTML = heroUnderTitles[index];
     hero.style.background = heroBackgrounds[index];
-    hero.style.color = heroColors[index];
     dots.forEach(dot => {
         dot.style.background = "#F6F3EF";
     });
     dots[index].style.background ="unset"
+    heroButton.href = heroLinks[index];
 
 
     index = (index + 1) % heroTitles.length;
