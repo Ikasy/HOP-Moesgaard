@@ -1,16 +1,19 @@
 const heroTitle = document.getElementById("heroTitle");
-const heroUnderTitle = document.getElementById("heroUnderTitle"); // Corrected ID
-const heroButton = document.getElementById("heroButton"); // Corrected ID
-const newsletterCTA = document.getElementById("newsletterCTA"); // Corrected ID
-const newsletterContent = document.getElementById("newsletterContent"); // Corrected ID
-const newsletterinput = document.getElementById("newsletterinput"); // Corrected ID
-const burgerMenu = document.getElementById("burgerMenu"); // Corrected ID
-const email = document.getElementById("email"); // Corrected ID
-const navIcon = document.getElementById("navIcon"); // Corrected ID
+const heroUnderTitle = document.getElementById("heroUnderTitle"); 
+const heroButton = document.getElementById("heroButton");
+const newsletterCTA = document.getElementById("newsletterCTA"); 
+const newsletterContent = document.getElementById("newsletterContent");
+const newsletterinput = document.getElementById("newsletterinput");
+const burgerMenu = document.getElementById("burgerMenu"); 
+const email = document.getElementById("email"); 
+const navIcon = document.getElementById("navIcon"); 
 const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
 const dots = document.querySelectorAll(".dot");
-let timesClicked = 0
+const exhibitContainers = document.querySelectorAll(".exhibitContainer");
+
+
+// Arrays til hero
 let heroTitles = [
     "Moder jord", 
     "Jernalderen",
@@ -35,6 +38,7 @@ let heroLinks = [
 
 let index = 0;
 
+// Funktion til at skifte heroens information baseret på ovenstående arrays
 function updateHero() {
     heroTitle.innerHTML = heroTitles[index];
     heroUnderTitle.innerHTML = heroUnderTitles[index];
@@ -45,12 +49,17 @@ function updateHero() {
     dots[index].style.background ="unset"
     heroButton.href = heroLinks[index];
 
-
+// tager index og plusser med 1 indtil den når længden af arrays og nulstiller
     index = (index + 1) % heroTitles.length;
 
     setTimeout(updateHero, 5000);
 }
+// Initierende kald til hero
+updateHero();
 
+
+// nyhedsbrevsfunktion der på en telefon åbner tekstfeltet og skjuler det igen baseret på hvor mange gange der bliver trykket
+let timesClicked = 0
 function openNewsletter(e){
     e.preventDefault();
     console.log(window.innerWidth)
@@ -87,7 +96,7 @@ function openNewsletter(e){
 }
 
 
-
+// toggel burgermenu på telefon
 function toggleBurger(e){
     e.preventDefault();
     burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
@@ -96,59 +105,40 @@ function toggleBurger(e){
 
 }
 
+
+// Scroll funktion til sliderene
 document.addEventListener("DOMContentLoaded", () => {
-    const exhibitContainers = document.querySelectorAll(".exhibitContainer");
 
     exhibitContainers.forEach(container => {
         const leftArrow = container.querySelector(".arrows svg:first-child");
         const rightArrow = container.querySelector(".arrows svg:last-child");
         const exhibits = container.querySelector(".exhibits");
-console.log(exhibits.scrollWidth - exhibits.clientWidth);
 
-
-        // Function to check the scroll position and toggle arrow visibility
+        //Funktion der viser og skjuler pile baseret på scroll positionen
         const updateArrowVisibility = () => {
-            console.log(exhibits.scrollLeft);
             leftArrow.style.visibility = exhibits.scrollLeft > 0 ? "visible" : "hidden";
             rightArrow.style.visibility = exhibits.scrollLeft < exhibits.scrollWidth - exhibits.clientWidth - 1 ? "visible" : "hidden";
 
         };
 
-        // Scroll left by a fixed amount
+        // Scroll venstre 
         leftArrow.addEventListener("click", () => {
             exhibits.scrollBy({
-                left: -200,
+                left: -300,
                 behavior: "smooth"
             });
         });
 
-        // Scroll right by a fixed amount
+        // Scroll højre
         rightArrow.addEventListener("click", () => {
             exhibits.scrollBy({
-                left: 200,
+                left: 300,
                 behavior: "smooth"
             });
         });
 
-        // Add a scroll event listener to update arrow visibility
         exhibits.addEventListener("scroll", updateArrowVisibility);
 
-        // Initialize arrow visibility on page load
         updateArrowVisibility();
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-updateHero();
-
-

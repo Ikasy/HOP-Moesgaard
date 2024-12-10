@@ -47,6 +47,7 @@ p {
 }
 
 .buttonFill {
+    box-sizing: border-box;
     background-color: #FF5964;
     text-decoration: none;
     color: #1A1A1A;
@@ -58,6 +59,10 @@ p {
     font-size: 1.25rem;
     letter-spacing: calc(1.25rem * 0.07);
     text-transform: uppercase;
+    transition: all .15s ease;
+}
+.buttonFill:hover{
+    background-color: #F6F3EF;
 }
 
 .buttonOutline {
@@ -65,6 +70,7 @@ p {
     text-decoration: none;
     color: #F6F3EF;
     padding: .5rem 2.25rem;
+    transition: all .15s ease;
     border-radius: 100px;
     display: block;
     width: fit-content;
@@ -73,6 +79,10 @@ p {
     letter-spacing: calc(1.25rem * 0.07);
     text-transform: uppercase;
     margin-top: 2rem;
+}
+.buttonOutline:hover{
+    color:#121212;
+    background-color: #F6F3EF;
 }
 
 .fa-arrow-right {
@@ -97,6 +107,24 @@ p {
 
 .Info {
     width: 60%;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+    
+}
+
+::-webkit-scrollbar-track {
+    background:  rgba(255, 255, 255, 0.051); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F6F3EF;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #F6F3EF;
 }
 
 
@@ -402,13 +430,14 @@ header img {
     overflow-x: scroll;
     gap: 2rem;
 }
-
 .exhibits::-webkit-scrollbar {
-    display: none;
+    display: none;    
 }
+
 
 .exhibitCard p {
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .exhibitCard:last-child {

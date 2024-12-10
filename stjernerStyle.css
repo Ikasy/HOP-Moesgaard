@@ -53,8 +53,8 @@ body {
 }
 #dysse{
     position: absolute;
-    bottom: 2vh;
-    left: 15.2vw;
+    bottom: 15px;
+    left: 200px;
     z-index: 10;
 }
 
@@ -64,7 +64,7 @@ body {
     
     stroke-width: 2;
     fill: none;
-    animation-delay: 5s;
+    animation-delay: 1s;
 }
 
 #dysse path:nth-child(1) {
@@ -90,8 +90,8 @@ body {
 
 #henge{
     position: absolute;
-    bottom: 24vh;
-    left: 44vw;
+    bottom: 170px;
+    left: 660px;
     z-index: 10;
 }
 
@@ -101,279 +101,279 @@ body {
     
     stroke-width: 2;
     fill: none;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(1) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(2) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(3) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(4) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(5) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(6) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(7) {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(8) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(9) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(10) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(11) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(12) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(13) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(14) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(15) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(16) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(17) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(18) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(19) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(20) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(21) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(22) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(23) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(24) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(25) {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(26) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(27) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(28) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(29) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(30) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(31) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(32) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(33) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(34) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(35) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(36) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(37) {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #henge path:nth-child(38) {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: line-anim 8s ease forwards;
-    animation-delay: 7s;
+    animation-delay: 4s;
 }
 
 #hoeje{
     position: absolute;
-    bottom: 13vh;
-    left: 111vw;
+    bottom: 90px;
+    left: 1700px;
     z-index: 10;
 }
 
@@ -479,8 +479,8 @@ body {
 
 #rune{
     position: absolute;
-    bottom: 3vh;
-    left: 172vw;
+    bottom: 15px;
+    left: 2650px;
     z-index: 10;
 }
 #rune path {
