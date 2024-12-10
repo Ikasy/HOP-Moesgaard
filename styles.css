@@ -582,6 +582,19 @@ footer i {
     width: 30vw;
 }
 @media screen and (max-width:900px) {
+    .pcHead {
+        display: none;
+    }
+
+    .phoneHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+    
     h1 {
         font-size: 5rem;
         letter-spacing: calc(5rem * 0.07);
@@ -627,18 +640,7 @@ footer i {
         margin: unset;
     }
 
-    .pcHead {
-        display: none;
-    }
-
-    .phoneHead {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        margin: auto;
-    }
-
+    
     .headerLogo {
         width: 50%;
     }
