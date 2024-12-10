@@ -1,17 +1,9 @@
+// Hero id/klasser
 const heroTitle = document.getElementById("heroTitle");
 const heroUnderTitle = document.getElementById("heroUnderTitle");
-const heroButton = document.getElementById("heroButton");
-const newsletterCTA = document.getElementById("newsletterCTA");
-const newsletterContent = document.getElementById("newsletterContent");
-const newsletterinput = document.getElementById("newsletterinput");
-const burgerMenu = document.getElementById("burgerMenu");
-const email = document.getElementById("email");
-const navIcon = document.getElementById("navIcon");
 const hero = document.querySelector(".hero");
-const header = document.querySelector("header");
 const dots = document.querySelectorAll(".dot");
-const exhibitContainers = document.querySelectorAll(".exhibitContainer");
-
+const heroButton = document.getElementById("heroButton");
 
 // Arrays til hero
 let heroTitles = [
@@ -29,7 +21,6 @@ let heroBackgrounds = [
     "url('images/onkelgrauballe.jpg') no-repeat center/cover",
     "url('images/KrigerHero.png') no-repeat center/cover"
 ];
-
 let heroLinks = [
     "moderjord.html",
     "jernalderen.html",
@@ -55,8 +46,15 @@ function updateHero() {
     setTimeout(updateHero, 5000);
 }
 // Initierende kald til hero
-updateHero();
+if (heroTitle != null){
+    updateHero();
+}
 
+// Nyhedsbrev indhentning af id'er
+const newsletterCTA = document.getElementById("newsletterCTA");
+const newsletterContent = document.getElementById("newsletterContent");
+const newsletterinput = document.getElementById("newsletterinput");
+const email = document.getElementById("email");
 
 // nyhedsbrevsfunktion der på en telefon åbner tekstfeltet og skjuler det igen baseret på hvor mange gange der bliver trykket
 let timesClicked = 0
@@ -95,20 +93,23 @@ function openNewsletter(e) {
 
 }
 
+// Burger id/klasse
+const burgerMenu = document.getElementById("burgerMenu");
+const header = document.querySelector("header");
+const navIcon = document.getElementById("navIcon");
 
-// toggel burgermenu på telefon
+// toggle burgermenu på telefon
 function toggleBurger(e) {
     e.preventDefault();
     burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
     header.style.backgroundColor = (header.style.backgroundColor === '#121212') ? '#121212cc' : '#121212';
     navIcon.classList.contains('fa-xmark') ? navIcon.classList.remove('fa-xmark') : navIcon.classList.add('fa-xmark');
-
 }
 
 
 // Scroll funktion til sliderene
 document.addEventListener("DOMContentLoaded", () => {
-
+    const exhibitContainers = document.querySelectorAll(".exhibitContainer");
     exhibitContainers.forEach(container => {
         const leftArrow = container.querySelector(".arrows svg:first-child");
         const rightArrow = container.querySelector(".arrows svg:last-child");
