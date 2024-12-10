@@ -1,12 +1,12 @@
 const heroTitle = document.getElementById("heroTitle");
-const heroUnderTitle = document.getElementById("heroUnderTitle"); 
+const heroUnderTitle = document.getElementById("heroUnderTitle");
 const heroButton = document.getElementById("heroButton");
-const newsletterCTA = document.getElementById("newsletterCTA"); 
+const newsletterCTA = document.getElementById("newsletterCTA");
 const newsletterContent = document.getElementById("newsletterContent");
 const newsletterinput = document.getElementById("newsletterinput");
-const burgerMenu = document.getElementById("burgerMenu"); 
-const email = document.getElementById("email"); 
-const navIcon = document.getElementById("navIcon"); 
+const burgerMenu = document.getElementById("burgerMenu");
+const email = document.getElementById("email");
+const navIcon = document.getElementById("navIcon");
 const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
 const dots = document.querySelectorAll(".dot");
@@ -15,18 +15,18 @@ const exhibitContainers = document.querySelectorAll(".exhibitContainer");
 
 // Arrays til hero
 let heroTitles = [
-    "Moder jord", 
+    "Moder jord",
     "Jernalderen",
     "Kriger"
 ];
 let heroUnderTitles = [
-    "11. okt. 2024 - 10. aug. 2025", 
+    "11. okt. 2024 - 10. aug. 2025",
     "Mød fortidens moselig",
     "22. mar. 2024 - Efteråret 2025"
 ];
 let heroBackgrounds = [
     "url('images/ModerJordHero.png') no-repeat center/cover",
-    "url('images/onkelgrauballe.jpg') no-repeat left/cover",
+    "url('images/onkelgrauballe.jpg') no-repeat center/cover",
     "url('images/KrigerHero.png') no-repeat center/cover"
 ];
 
@@ -46,10 +46,10 @@ function updateHero() {
     dots.forEach(dot => {
         dot.style.background = "#F6F3EF";
     });
-    dots[index].style.background ="unset"
+    dots[index].style.background = "unset"
     heroButton.href = heroLinks[index];
 
-// tager index og plusser med 1 indtil den når længden af arrays og nulstiller
+    // tager index og plusser med 1 indtil den når længden af arrays og nulstiller
     index = (index + 1) % heroTitles.length;
 
     setTimeout(updateHero, 5000);
@@ -60,10 +60,10 @@ updateHero();
 
 // nyhedsbrevsfunktion der på en telefon åbner tekstfeltet og skjuler det igen baseret på hvor mange gange der bliver trykket
 let timesClicked = 0
-function openNewsletter(e){
+function openNewsletter(e) {
     e.preventDefault();
     console.log(window.innerWidth)
-    if(window.innerWidth < 600 && timesClicked <= 1){
+    if (window.innerWidth < 600 && timesClicked <= 1) {
         newsletterCTA.style.display = "block"
         newsletterContent.style.backgroundColor = "#fff"
         newsletterinput.style.width = "100%"
@@ -74,7 +74,7 @@ function openNewsletter(e){
         email.style.width = "100%"
         timesClicked++
     }
-    if (timesClicked == 2){
+    if (timesClicked == 2) {
         email.value = '';
         const confirmationMessage = document.createElement('p');
         confirmationMessage.textContent = 'Du er nu tilmeldt nyhedsbrevet!';
@@ -92,12 +92,12 @@ function openNewsletter(e){
             confirmationMessage.remove();
         }, 3000);
     }
-   
+
 }
 
 
 // toggel burgermenu på telefon
-function toggleBurger(e){
+function toggleBurger(e) {
     e.preventDefault();
     burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
     header.style.backgroundColor = (header.style.backgroundColor === '#121212') ? '#121212cc' : '#121212';
