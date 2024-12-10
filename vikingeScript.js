@@ -9,24 +9,17 @@ function openOverlay(overlayId) {
     if (openOverlay) {
         overlayHistory.push(openOverlay.id);
     }
-    
+
     // Lukker alle overlays
     closeOverlay();
 
     // Skjuler baggrunden
     boxcontainer.style.display = "none";
-    
+
     // Finder og viser det ønskede overlay
     const overlay = document.getElementById(overlayId);
     if (overlay) {
         overlay.style.display = 'flex';
-
-        // Tilføjer klik-hændelse til overlay for at lukke ved klik udenfor
-        overlay.addEventListener('click', function (e) {
-            if (e.target.classList.contains('overlay-background')) {
-                closeOverlay();
-            }
-        });
     }
 }
 
