@@ -581,6 +581,7 @@ footer i {
 .footerLogo img{
     width: 30vw;
 }
+
 @media screen and (max-width:900px) {
     .pcHead {
         display: none;
@@ -594,7 +595,7 @@ footer i {
         margin: auto;
     }
 
-    
+
     h1 {
         font-size: 5rem;
         letter-spacing: calc(5rem * 0.07);

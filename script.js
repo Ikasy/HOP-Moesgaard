@@ -55,7 +55,9 @@ function updateHero() {
     setTimeout(updateHero, 5000);
 }
 // Initierende kald til hero
-updateHero();
+if (heroTitle != null){
+    updateHero();
+}
 
 
 // nyhedsbrevsfunktion der på en telefon åbner tekstfeltet og skjuler det igen baseret på hvor mange gange der bliver trykket
