@@ -104,7 +104,6 @@ function toggleBurger(e) {
     burgerMenu.style.display = (burgerMenu.style.display === 'flex') ? 'none' : 'flex';
     header.style.backgroundColor = (header.style.backgroundColor === '#121212') ? '#121212cc' : '#121212';
     navIcon.classList.contains('fa-xmark') ? navIcon.classList.remove('fa-xmark') : navIcon.classList.add('fa-xmark');
-
 }
 
 
