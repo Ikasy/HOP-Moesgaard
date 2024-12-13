@@ -3,27 +3,24 @@ const hotspotContents = document.querySelectorAll('.hotspot-content');
 const container = document.getElementById('container');
 const hotspots = document.querySelectorAll('.hotspot');
 
-let zoomAmount = 0.8; // Initial zoom level
-let rotationX = 0; // Initial X rotation
-let rotationY = 0; // Initial Y rotation
+let zoomAmount = 0.8; 
+let rotationX = 0;
+let rotationY = 0; 
 let activeHotspotIndex = null;
 
-// Mousemove event to handle rotation
+// Håntere npår man flytter på musen alt efter containerens størrelse
 container.addEventListener('mousemove', (e) => {
-  const rect = container.getBoundingClientRect(); // Get the bounding rectangle of the container
-  const mouseX = e.clientX - rect.left; // Mouse X relative to the container
-  const mouseY = e.clientY - rect.top;  // Mouse Y relative to the container
+  const rect = container.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left; 
+  const mouseY = e.clientY - rect.top; 
 
-  // Calculate rotation based on the container's dimensions
   rotationX = ((rect.width / 2 - mouseX) / 25).toFixed(2);
   rotationY = ((rect.height / 2 - mouseY) / 25).toFixed(2);
 
-  // Apply the transformations
   imageWrapper.style.transform = `rotateY(${rotationX}deg) rotateX(${rotationY}deg) scale(${zoomAmount})`;
 });
 
-
-// Wheel event to handle zoom
+// Håndtere zoom ved scroll
 container.addEventListener('wheel', (e) => {
   if (!e.target.closest('.hotspot-content')) {
       zoomAmount += e.deltaY < 0 ? 0.1 : -0.1;
@@ -33,31 +30,28 @@ container.addEventListener('wheel', (e) => {
   }
 });
 
-
-// Hotspot click event to toggle popups
+// Hotspots klik til åbning og lukning hvis den har været åbnet
 hotspots.forEach((hotspot, index) => {
   hotspot.addEventListener('click', () => {
     if (activeHotspotIndex === index) {
-      closePopup(); // Close if the same hotspot is clicked again
+      closePopup(); 
     } else {
-      closePopup(); // Close any open popup first
+      closePopup();
       activeHotspotIndex = index;
       hotspots.forEach(spot => (spot.style.opacity = "1"));
-      hotspot.style.opacity = "0.5"; // Highlight selected hotspot
-      hotspotContents[index].style.display = 'block'; // Show associated content
+      hotspot.style.opacity = "0.5";
+      hotspotContents[index].style.display = 'block';
       imageWrapper.style.margin = "auto 0 auto auto"
 
     }
   });
 });
-
-// Function to close any open popup
+// Lukke information igen
 function closePopup() {
   if (activeHotspotIndex !== null) {
-    hotspotContents[activeHotspotIndex].style.display = "none"; // Hide active content
-    hotspots[activeHotspotIndex].style.opacity = "1"; // Reset hotspot opacity
-    activeHotspotIndex = null; // Reset active index
+    hotspotContents[activeHotspotIndex].style.display = "none"; 
+    hotspots[activeHotspotIndex].style.opacity = "1"; 
+    activeHotspotIndex = null; 
     imageWrapper.style.margin = "auto"
-
   }
 }
