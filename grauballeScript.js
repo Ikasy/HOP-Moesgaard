@@ -8,7 +8,7 @@ let rotationX = 0;
 let rotationY = 0; 
 let activeHotspotIndex = null;
 
-// Håntere npår man flytter på musen alt efter containerens størrelse
+// Håntere når man flytter på musen alt efter containerens størrelse
 container.addEventListener('mousemove', (e) => {
   const rect = container.getBoundingClientRect();
   const mouseX = e.clientX - rect.left; 
